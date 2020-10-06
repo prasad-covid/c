@@ -1,0 +1,29 @@
+/*reverse of a number and sum of the digits*/
+#include<stdio.h>
+int kadanes(int);
+void kad(int);
+int main(){
+    int x;
+    scanf("%d",&x);
+    int v=kadanes(x);
+    printf("%d\n",v);
+    kad(x);
+}
+int kadanes(int n){
+    int temp=0,sum=0;
+    while(n!=0){
+        temp=n%10;
+        
+        sum+=temp;
+        n/=10;
+    }
+    return sum;
+}
+void kad(int n){
+    int temp=0;
+    while(n!=0){
+        temp=n%10;
+        printf("%d",temp);
+        n/=10;
+    }
+}
